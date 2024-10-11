@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@symfony/webpack-encore": ["./webpack-encore.d.ts"]
+      }
+    }
+  }
+  

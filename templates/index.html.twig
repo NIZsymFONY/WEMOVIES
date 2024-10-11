@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+        <style>
+        .ui-autocomplete {
+            background-color: white; /* Fond blanc */
+            border: 1px solid #ccc; /* Bordure */
+            z-index: 1000; /* Assurer le bon affichage */
+        }
+
+        .ui-menu-item {
+            padding: 8px 12px; /* Padding pour les éléments */
+        }
+
+        .ui-menu-item:hover {
+            background-color: #f1f1f1; /* Fond au survol */
+        }
+    </style>
+
+
+        <div class="row">
+            <div class="col-md-12 p-3 d-flex align-items-center">
+                <div class="col-md-9">
+                    <h1 class="me-3">We Movies</h1>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-search"></i> <!-- Icône de recherche -->
+                        </span>
+                        <input type="text" id="search-one-movie" class="form-control" placeholder="Rechercher un film...">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="alert alert-info text-center mb-4">
+            <h2>Meilleur film: {{ bestMovie.title }}</h2>
+            <p>{{ bestMovie.overview }}</p>
+            {% if trailer %}
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ trailer.key }}" frameborder="0" allowfullscreen></iframe>
+            {% endif %}
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="list-group">
+                    <form id="filter-form">
+                        {% for genre in genres %}
+                            <div class="list-group-item">
+                                <input class="form-check-input genre-checkbox" type="checkbox" name="genres[]" value="{{ genre.id }}" id="genre{{ genre.id }}">
+                                <label class="form-check-label" for="genre{{ genre.id }}">
+                                    {{ genre.name }}
+                                </label>
+                            </div>
+                        {% endfor %}
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <h4>Rechercher un film :</h4>
+                
+                <input type="text" id="movie-search" class="form-control" placeholder="Chercher un film...">
+                <ul id="search-results" class="list-group mt-2"></ul>
+
+                <h4>Films :</h4>
+                <div id="movies-list">
+                    
+                    
+                </div>
+                <div class="pagination">
+                    <button id="prev-page" class="btn btn-primary">Previous</button>
+                    <span id="current-page">Page 1</span>
+                    <button id="next-page" class="btn btn-primary">Next</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    
+
+
+
+{% endblock %}

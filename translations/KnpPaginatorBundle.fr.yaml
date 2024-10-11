@@ -1,0 +1,9 @@
+KnpPaginatorBundle:
+    page: "Page"
+    of: "sur"
+    first: "Première"
+    previous: "Précédente"
+    next: "Suivante"
+    last: "Dernière"
+    filter: "Filtrer"
+    empty: "Aucun résultat trouvé."

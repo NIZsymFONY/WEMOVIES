@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {{ encore_entry_link_tags('app') }}
+        <script src="https://www.youtube.com/iframe_api"></script>
+
+
+
+    </head>
+    <body>
+        <div id="app" class="container">
+            {% block body %}{% endblock %}
+        </div>
+         {{ encore_entry_script_tags('app') }} {# Inclut le JavaScript #}
+    </body>
+</html>
