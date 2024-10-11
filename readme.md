@@ -1,4 +1,4 @@
-# Gestion des Films
+# WeMovie
 
 Ce projet est une application web de gestion de films, permettant aux utilisateurs de rechercher, filtrer et afficher des films par genre, ainsi que d'obtenir des détails sur chaque film. L'application utilise jQuery, Bootstrap et l'API de TheMovieDB pour fournir une expérience utilisateur dynamique et réactive.
 
@@ -22,7 +22,7 @@ Ce projet est une application web de gestion de films, permettant aux utilisateu
 
 ## Installation
 
-1. Clonez le dépôt  
+1- Clonez le dépôt  https://github.com/NIZsymFONY/WEMOVIES.git
 2- cd WEMOVIES
 3- composer install
 4- npm install
